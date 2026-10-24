@@ -1,7 +1,7 @@
 # 🍽️ Zunoindia — Smart Food Pre-Ordering & Table Scheduling Platform
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://zuno-food-application.vercel.app)
-[![Backend Status](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://zuno-food-application.onrender.com)
+[![Backend Status](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://zuno-food-backend.onrender.com)
 [![MERN Stack](https://img.shields.io/badge/Stack-MERN-00ED64?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
