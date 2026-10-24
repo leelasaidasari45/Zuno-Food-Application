@@ -4,8 +4,9 @@
 
 import axios from "axios";
 
-// Base URL of our backend - change this if you deploy
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// Base URL of our backend - auto-normalizes whether /api is included or not
+let rawUrl = (import.meta.env.VITE_API_URL || "http://localhost:5000/api").trim().replace(/\/+$/, "");
+const BASE_URL = rawUrl.endsWith("/api") ? rawUrl : `${rawUrl}/api`;
 
 // Create an axios instance with default settings
 const api = axios.create({

@@ -38,11 +38,18 @@ const menuRoutes = require("./routes/menuRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 
 // Mount the routes with a base path prefix
-// e.g. any request to /api/auth/... will be handled by authRoutes
+// Supported with /api (standard) and without /api (fallback)
 app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
+
 app.use("/api/restaurants", restaurantRoutes);
+app.use("/restaurants", restaurantRoutes);
+
 app.use("/api/menu", menuRoutes);
+app.use("/menu", menuRoutes);
+
 app.use("/api/orders", orderRoutes);
+app.use("/orders", orderRoutes);
 
 // -----------------------------------------------
 // ROOT ROUTE - just to test if server is running
