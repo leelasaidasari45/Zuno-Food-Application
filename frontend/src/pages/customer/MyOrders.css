@@ -1,0 +1,138 @@
+/* src/pages/customer/MyOrders.css */
+/* Styles for customer order history page */
+
+.my-orders-page {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+.my-orders-container {
+  padding: 36px 20px 60px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.my-orders-header {
+  margin-bottom: 28px;
+}
+
+.my-orders-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.my-orders-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-history-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.order-history-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border);
+}
+
+.order-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.order-restaurant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-restaurant-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+}
+
+.order-id-tag {
+  font-size: 0.76rem;
+  font-family: monospace;
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.order-items-preview {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.order-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.order-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.order-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.order-total-amount {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+@media (max-width: 600px) {
+  .my-orders-container {
+    padding: 24px 16px;
+  }
+
+  .order-history-card {
+    padding: 18px;
+  }
+
+  .order-card-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-total-amount {
+    align-self: flex-end;
+  }
+}

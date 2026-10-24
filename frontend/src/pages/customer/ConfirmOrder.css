@@ -1,0 +1,210 @@
+/* ============================================
+   Confirm Order Page Styles
+   ============================================ */
+
+.confirm-page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.confirm-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 36px 20px;
+}
+
+.confirm-heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.confirm-subtitle {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+}
+
+.confirm-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Details form card */
+.confirm-form-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.confirm-form-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confirm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Time and table selectors */
+.select-input {
+  padding: 12px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: white;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  cursor: pointer;
+}
+
+.select-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Table selection grid */
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.table-btn {
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--border);
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-bg);
+}
+
+.table-btn.selected {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+/* Order summary sidebar */
+.confirm-summary-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  position: sticky;
+  top: 90px;
+  box-shadow: var(--shadow-sm);
+}
+
+.confirm-summary-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
+}
+
+.confirm-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.confirm-item-name {
+  color: var(--text-medium);
+  flex: 1;
+}
+
+.confirm-item-qty {
+  color: var(--text-light);
+  font-size: 0.8rem;
+  margin: 0 8px;
+}
+
+.confirm-item-price {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.confirm-total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.confirm-advance-box {
+  background: var(--primary-bg);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+.confirm-pay-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirm-pay-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.4);
+}
+
+.confirm-pay-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .confirm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .confirm-summary-card {
+    position: static;
+  }
+}

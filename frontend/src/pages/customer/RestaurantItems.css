@@ -1,0 +1,419 @@
+/* ============================================
+   Restaurant Items Page Styles
+   ============================================ */
+
+.restaurant-items-page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 120px; /* space for floating cart bar */
+}
+
+/* ---- Banner Hero ---- */
+.restaurant-banner {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.restaurant-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurant-banner-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b0e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+/* Dark overlay on banner */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+/* Back button on banner */
+.banner-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.banner-back-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Restaurant info on banner */
+.banner-info {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  color: white;
+}
+
+.banner-open-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--green);
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.banner-open-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.banner-restaurant-name {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.banner-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.banner-address {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ---- Menu Section ---- */
+.menu-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Veg/NonVeg filter tabs */
+.veg-filter-bar {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 28px;
+}
+
+.veg-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border);
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-medium);
+}
+
+.veg-filter-btn:hover {
+  border-color: var(--primary);
+}
+
+.veg-filter-btn.active {
+  background: var(--primary-bg);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.veg-indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.veg-indicator::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.veg-indicator.green { border-color: var(--green); }
+.veg-indicator.green::after { background: var(--green); }
+.veg-indicator.red { border-color: var(--red); }
+.veg-indicator.red::after { background: var(--red); }
+
+/* Category group heading */
+.menu-category-group {
+  margin-bottom: 32px;
+}
+
+.menu-category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-category-count {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+/* ---- Menu Item Card ---- */
+.menu-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.menu-item-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.menu-item-card.unavailable {
+  opacity: 0.5;
+}
+
+/* Item info - left side */
+.menu-item-info {
+  flex: 1;
+}
+
+.menu-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.menu-item-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.menu-item-desc {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.menu-item-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-item-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.serves-tag {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Item image - right side */
+.menu-item-image-box {
+  position: relative;
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.menu-item-img {
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.menu-item-img-placeholder {
+  width: 110px;
+  height: 90px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #fff4f0, #ffe0d0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Add button overlapping the image */
+.add-btn-wrap {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.add-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 7px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.add-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Qty counter when item is already in cart */
+.qty-counter {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--primary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+}
+
+.qty-counter-btn {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.qty-counter-btn:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.qty-counter-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ---- Floating Cart Bar ---- */
+.floating-cart-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 16px 28px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.5);
+  cursor: pointer;
+  min-width: 320px;
+  z-index: 50;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.floating-cart-bar:hover {
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.floating-cart-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-cart-count {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.floating-cart-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.floating-cart-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+}

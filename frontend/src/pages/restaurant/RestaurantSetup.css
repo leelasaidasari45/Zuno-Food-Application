@@ -1,0 +1,105 @@
+/* ============================================
+   Restaurant Setup Page Styles
+   ============================================ */
+
+.setup-page-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff4f0 0%, #ffe8df 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.setup-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  max-width: 540px;
+  width: 100%;
+  box-shadow: var(--shadow-xl);
+}
+
+.setup-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.setup-header .setup-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.setup-header h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.setup-header p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.setup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Category chips selector */
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.category-chip {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--border);
+  background: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.category-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.category-chip.selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.setup-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.setup-submit-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.4);
+}
+
+.setup-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

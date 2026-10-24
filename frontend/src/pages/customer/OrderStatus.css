@@ -1,0 +1,228 @@
+/* ============================================
+   Order Status Page Styles
+   ============================================ */
+
+.order-status-page {
+  background: var(--bg);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.order-status-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Success banner at top */
+.order-confirmed-banner {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  color: white;
+  margin-bottom: 28px;
+}
+
+.confirmed-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.confirmed-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.confirmed-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Order ID chip */
+.order-id-chip {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* Status Timeline */
+.status-timeline-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+.status-timeline-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  position: relative;
+}
+
+/* Vertical line connecting steps */
+.timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  width: 2px;
+  height: 40px;
+  background: var(--border-light);
+}
+
+.timeline-step.done::after {
+  background: var(--green);
+}
+
+.timeline-step.active::after {
+  background: linear-gradient(to bottom, var(--primary), var(--border-light));
+}
+
+/* Step icon circle */
+.step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  border: 2px solid var(--border);
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.timeline-step.done .step-icon {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.timeline-step.active .step-icon {
+  background: var(--primary-bg);
+  border-color: var(--primary);
+  animation: stepPulse 1.5s infinite;
+}
+
+@keyframes stepPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(255, 107, 53, 0); }
+}
+
+.step-content {
+  padding: 8px 0 32px;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-medium);
+}
+
+.timeline-step.done .step-label {
+  color: var(--green);
+}
+
+.timeline-step.active .step-label {
+  color: var(--primary);
+}
+
+.step-desc {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* Order Details card */
+.order-details-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: 20px;
+}
+
+.order-details-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.order-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.order-detail-row:last-child {
+  border-bottom: none;
+}
+
+.order-detail-label {
+  color: var(--text-light);
+}
+
+.order-detail-value {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Current status badge (large) */
+.current-status-badge {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Back to home button */
+.back-home-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-home-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,258 @@
+/* ============================================
+   Restaurant Items Management Page Styles
+   ============================================ */
+
+.items-page {
+  width: 100%;
+}
+
+/* Add item form card */
+.add-item-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  padding: 28px;
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+/* Collapsible header */
+.add-item-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.add-item-toggle h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: var(--primary);
+  transition: transform 0.2s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(45deg);
+}
+
+/* Add item form */
+.add-item-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+/* Veg toggle switch */
+.veg-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-medium);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.toggle-option.veg-active {
+  border-color: var(--green);
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.toggle-option.nonveg-active {
+  border-color: var(--red);
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+/* Submit button for add form */
+.add-item-submit-btn {
+  padding: 12px 28px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.add-item-submit-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.add-item-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Menu item rows in management view */
+.menu-manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-manage-item {
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease;
+}
+
+.menu-manage-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.menu-manage-item.unavailable {
+  opacity: 0.65;
+}
+
+.menu-manage-img {
+  width: 60px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.menu-manage-img-placeholder {
+  width: 60px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.menu-manage-info {
+  flex: 1;
+}
+
+.menu-manage-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.menu-manage-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-manage-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Action buttons for each item */
+.menu-manage-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Availability toggle button */
+.avail-toggle-btn {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.avail-toggle-btn.available {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.avail-toggle-btn.available:hover {
+  background: var(--green);
+  color: white;
+}
+
+.avail-toggle-btn.unavailable-btn {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+.avail-toggle-btn.unavailable-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
+/* Delete button */
+.delete-item-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--red-bg);
+  color: var(--red);
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.delete-item-btn:hover {
+  background: var(--red);
+  color: white;
+}
