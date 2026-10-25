@@ -1,3 +1,7 @@
+// src/pages/customer/AboutPage.jsx
+// Modern, beautiful About Page for Zunoindia
+// Tells the story, problem solved, how it works, core values, and team
+
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./AboutPage.css";
@@ -7,7 +11,7 @@ const AboutPage = () => {
 
   return (
     <div className="about-page-root">
-      {/* Top Navigation Bar */}
+      {/* Top Navbar */}
       <Navbar />
 
       <main className="about-main-container">
@@ -25,50 +29,144 @@ const AboutPage = () => {
             </svg>
             <span>Back</span>
           </button>
+          
+          <div className="about-breadcrumb-tag">
+            <span>Zunoindia</span>
+            <span className="crumb-slash">/</span>
+            <span className="crumb-active">About Our Story</span>
+          </div>
         </div>
 
-        {/* HERO SECTION */}
+        {/* HERO SECTION - REDESIGNED */}
         <section className="about-hero-section">
           <div className="hero-glow hero-glow-1"></div>
           <div className="hero-glow hero-glow-2"></div>
 
-          <div className="about-hero-content">
-            <div className="about-story-pill">
-              <span className="pill-star">★</span>
-              <span>The Zunoindia Story</span>
+          <div className="about-hero-split">
+            {/* Left Column: Narrative & Action */}
+            <div className="hero-left-column">
+              <div className="about-story-pill">
+                <span className="pill-star">★</span>
+                <span>The Zunoindia Story</span>
+              </div>
+
+              <h1 className="about-hero-title">
+                Crafted For People Who Value <br />
+                <span className="gradient-highlight">Time & Extraordinary Food.</span>
+              </h1>
+
+              <p className="about-hero-subtitle">
+                We started Zunoindia with a simple conviction: you should never have to wait 45 minutes
+                at a dining table for your food to arrive. By synchronizing diner arrivals with intelligent
+                kitchen prep, we make dining out seamless, predictable, and memorable.
+              </p>
+
+              <div className="hero-actions-row">
+                <Link to="/home" className="hero-cta-primary">
+                  <span>Explore Restaurants</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </Link>
+                <a href="#how-it-works" className="hero-cta-secondary">
+                  <span>How It Works</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
 
-            <h1 className="about-hero-title">
-              Crafted For People Who Value <br />
-              <span className="gradient-highlight">Time & Extraordinary Food.</span>
-            </h1>
+            {/* Right Column: Interactive Live Ticket Preview */}
+            <div className="hero-right-column">
+              <div className="hero-live-card">
+                <div className="hero-card-header">
+                  <div className="hero-live-tag">
+                    <span className="hero-pulse-dot"></span>
+                    <span>Kitchen Sync Active</span>
+                  </div>
+                  <span className="hero-arrival-badge">Table #04 • 1:30 PM</span>
+                </div>
 
-            <p className="about-hero-subtitle">
-              We started Zunoindia with a simple conviction: you should never have to wait 45 minutes
-              at a dining table for your food to arrive. By synchronizing diner arrivals with intelligent
-              kitchen prep, we make dining out seamless, predictable, and memorable.
-            </p>
+                <div className="hero-ticket-dishes">
+                  <div className="hero-dish-row">
+                    <div className="dish-qty">2×</div>
+                    <div className="dish-info">
+                      <div className="dish-title">Special Dum Biryani</div>
+                      <div className="dish-sub">Finishing in kitchen</div>
+                    </div>
+                    <span className="dish-pill-prep">Hot Prep</span>
+                  </div>
 
-            {/* Quick Metrics Ribbon */}
-            <div className="about-stats-ribbon">
-              <div className="stat-card">
-                <span className="stat-number">0 min</span>
-                <span className="stat-label">Table Waiting Time</span>
+                  <div className="hero-dish-row">
+                    <div className="dish-qty">1×</div>
+                    <div className="dish-info">
+                      <div className="dish-title">Butter Naan & Paneer Tikka</div>
+                      <div className="dish-sub">Tandoor roasted</div>
+                    </div>
+                    <span className="dish-pill-prep">Hot Prep</span>
+                  </div>
+                </div>
+
+                <div className="hero-ticket-progress">
+                  <div className="progress-labels">
+                    <span>Kitchen Schedule</span>
+                    <span className="progress-pct">Ready Upon Arrival</span>
+                  </div>
+                  <div className="progress-track">
+                    <div className="progress-fill"></div>
+                  </div>
+                </div>
+
+                <div className="hero-card-footer">
+                  <div className="footer-stat-snippet">
+                    <span className="stat-icon">⚡</span>
+                    <span>Average wait time reduced from 45 min to <strong>0 min</strong></span>
+                  </div>
+                </div>
               </div>
-              <div className="stat-separator"></div>
-              <div className="stat-card">
-                <span className="stat-number">100+</span>
-                <span className="stat-label">Partner Kitchens</span>
+            </div>
+          </div>
+
+          {/* Quick Metrics Ribbon - Scoped with unique classes */}
+          <div className="about-hero-metrics-bar">
+            <div className="about-hero-stat-card">
+              <div className="stat-icon-disc">⏱️</div>
+              <div className="stat-text-group">
+                <span className="about-stat-number">0 min</span>
+                <span className="about-stat-label">Table Waiting Time</span>
               </div>
-              <div className="stat-separator"></div>
-              <div className="stat-card">
-                <span className="stat-number">4.9 ★</span>
-                <span className="stat-label">Diner Satisfaction</span>
+            </div>
+
+            <div className="about-metric-divider"></div>
+
+            <div className="about-hero-stat-card">
+              <div className="stat-icon-disc">🍽️</div>
+              <div className="stat-text-group">
+                <span className="about-stat-number">100+</span>
+                <span className="about-stat-label">Partner Kitchens</span>
               </div>
-              <div className="stat-separator"></div>
-              <div className="stat-card">
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Hot & Fresh On Arrival</span>
+            </div>
+
+            <div className="about-metric-divider"></div>
+
+            <div className="about-hero-stat-card">
+              <div className="stat-icon-disc">⭐</div>
+              <div className="stat-text-group">
+                <span className="about-stat-number">4.9 ★</span>
+                <span className="about-stat-label">Diner Satisfaction</span>
+              </div>
+            </div>
+
+            <div className="about-metric-divider"></div>
+
+            <div className="about-hero-stat-card">
+              <div className="stat-icon-disc">🔥</div>
+              <div className="stat-text-group">
+                <span className="about-stat-number">100%</span>
+                <span className="about-stat-label">Fresh On Arrival</span>
               </div>
             </div>
           </div>
@@ -150,7 +248,7 @@ const AboutPage = () => {
         </section>
 
         {/* HOW IT WORKS (3 SIMPLE STEPS) */}
-        <section className="about-how-it-works-section">
+        <section id="how-it-works" className="about-how-it-works-section">
           <div className="section-header-centered">
             <span className="section-eyebrow">Effortless Dining</span>
             <h2 className="section-title">How Zunoindia Works</h2>
@@ -248,15 +346,15 @@ const AboutPage = () => {
               <span className="creator-tag">The Maker</span>
               <h3 className="creator-name">Developed by Leela Sai Dasari</h3>
               <p className="creator-bio">
-                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong>
-                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics,
+                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong> 
+                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics, 
                 and seamless table management algorithms.
               </p>
-
+              
               <div className="creator-links">
-                <a
-                  href="https://github.com/leelasaidasari45/Zuno-Food-Application"
-                  target="_blank"
+                <a 
+                  href="https://github.com/leelasaidasari45/Zuno-Food-Application" 
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="creator-gh-btn"
                 >
