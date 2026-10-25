@@ -3,17 +3,12 @@
 // Tells the story, problem solved, how it works, core values, and team
 
 import { useNavigate, Link } from "react-router-dom";
-import Navbar from "../../components/Navbar";
 import "./AboutPage.css";
 
 const AboutPage = () => {
   const navigate = useNavigate();
-
   return (
     <div className="about-page-root">
-      {/* Top Navbar */}
-      <Navbar />
-
       <main className="about-main-container">
         {/* Navigation & Breadcrumb */}
         <div className="about-top-bar">
@@ -29,7 +24,7 @@ const AboutPage = () => {
             </svg>
             <span>Back</span>
           </button>
-          
+
           <div className="about-breadcrumb-tag">
             <span>Zunoindia</span>
             <span className="crumb-slash">/</span>
@@ -346,15 +341,15 @@ const AboutPage = () => {
               <span className="creator-tag">The Maker</span>
               <h3 className="creator-name">Developed by Leela Sai Dasari</h3>
               <p className="creator-bio">
-                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong> 
-                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics, 
+                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong>
+                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics,
                 and seamless table management algorithms.
               </p>
-              
+
               <div className="creator-links">
-                <a 
-                  href="https://github.com/leelasaidasari45/Zuno-Food-Application" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/leelasaidasari45/Zuno-Food-Application"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="creator-gh-btn"
                 >
@@ -381,28 +376,6 @@ const AboutPage = () => {
               <span className="tech-badge">MongoDB Atlas</span>
               <span className="tech-badge">JWT Security</span>
               <span className="tech-badge">Vercel & Render</span>
-            </div>
-          </div>
-        </section>
-
-        {/* CALL TO ACTION BANNER */}
-        <section className="about-cta-section">
-          <div className="cta-banner-card">
-            <h2 className="cta-banner-title">Ready To Dine Without The Wait?</h2>
-            <p className="cta-banner-text">
-              Browse top-rated restaurants near you, schedule your table, and pre-order your meals right now.
-            </p>
-            <div className="cta-buttons-group">
-              <Link to="/home" className="cta-primary-btn">
-                <span>Start Pre-Ordering</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
-              <Link to="/" className="cta-secondary-btn">
-                <span>Restaurant Partner Sign In</span>
-              </Link>
             </div>
           </div>
         </section>
