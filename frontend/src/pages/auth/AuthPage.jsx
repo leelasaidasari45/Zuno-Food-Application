@@ -88,11 +88,11 @@ const AuthPage = () => {
       <div className="zuno-glow zuno-glow-2" />
 
       <div className="zuno-auth-container">
-        
+
         {/* LEFT HERO SHOWCASE */}
         <div className="zuno-hero-panel">
           <div className="zuno-hero-overlay" />
-          
+
           <div className="zuno-hero-content">
             {/* Top Brand Pill */}
             <div className="zuno-brand-header">
@@ -180,7 +180,7 @@ const AuthPage = () => {
         {/* RIGHT AUTH FORM PANEL */}
         <div className="zuno-form-panel">
           <div className="zuno-form-wrapper">
-            
+
             {/* Header Titles */}
             <div className="form-heading-block">
               <h2 className="form-main-title">
@@ -216,7 +216,7 @@ const AuthPage = () => {
               <div className="role-selection-group">
                 <label className="field-label-header">I am joining as:</label>
                 <div className="role-cards-grid">
-                  
+
                   {/* Customer Card */}
                   <div
                     className={`role-option-card ${role === "customer" ? "active" : ""}`}
@@ -278,7 +278,7 @@ const AuthPage = () => {
 
             {/* Interactive Form */}
             <form className="modern-auth-form" onSubmit={handleSubmit}>
-              
+
               {/* Full Name (Registration only) */}
               {tab === "register" && (
                 <div className="modern-form-field">
@@ -348,9 +348,6 @@ const AuthPage = () => {
               <div className="modern-form-field">
                 <div className="field-header-row">
                   <label className="field-label">Password</label>
-                  {tab === "login" && (
-                    <span className="forgot-hint">Secured with JWT</span>
-                  )}
                 </div>
                 <div className="input-with-icon">
                   <span className="input-icon">
