@@ -1,7 +1,3 @@
-// src/pages/customer/AboutPage.jsx
-// Modern, beautiful About Page for Zunoindia
-// Tells the story, problem solved, how it works, core values, and team
-
 import { useNavigate, Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./AboutPage.css";
@@ -15,12 +11,11 @@ const AboutPage = () => {
       <Navbar />
 
       <main className="about-main-container">
-        
         {/* Navigation & Breadcrumb */}
         <div className="about-top-bar">
-          <button 
-            type="button" 
-            className="about-back-btn" 
+          <button
+            type="button"
+            className="about-back-btn"
             onClick={() => navigate(-1)}
             aria-label="Go back"
           >
@@ -49,8 +44,8 @@ const AboutPage = () => {
             </h1>
 
             <p className="about-hero-subtitle">
-              We started Zunoindia with a simple conviction: you should never have to wait 45 minutes 
-              at a dining table for your food to arrive. By synchronizing diner arrivals with intelligent 
+              We started Zunoindia with a simple conviction: you should never have to wait 45 minutes
+              at a dining table for your food to arrive. By synchronizing diner arrivals with intelligent
               kitchen prep, we make dining out seamless, predictable, and memorable.
             </p>
 
@@ -253,15 +248,15 @@ const AboutPage = () => {
               <span className="creator-tag">The Maker</span>
               <h3 className="creator-name">Developed by Leela Sai Dasari</h3>
               <p className="creator-bio">
-                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong> 
-                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics, 
+                Zunoindia was built as an ambitious, full-stack dining platform using the <strong>MERN Stack</strong>
+                (MongoDB, Express, React, Node.js) with a focus on high-performance UX, responsive UI aesthetics,
                 and seamless table management algorithms.
               </p>
-              
+
               <div className="creator-links">
-                <a 
-                  href="https://github.com/leelasaidasari45/Zuno-Food-Application" 
-                  target="_blank" 
+                <a
+                  href="https://github.com/leelasaidasari45/Zuno-Food-Application"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="creator-gh-btn"
                 >
