@@ -16,6 +16,7 @@ import ConfirmOrder from "./pages/customer/ConfirmOrder";
 import PaymentPage from "./pages/customer/PaymentPage";
 import OrderStatus from "./pages/customer/OrderStatus";
 import MyOrders from "./pages/customer/MyOrders";
+import AboutPage from "./pages/customer/AboutPage";
 
 // Restaurant Pages
 import RestaurantSetup from "./pages/restaurant/RestaurantSetup";
@@ -116,6 +117,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route path="/about" element={<AboutPage />} />
 
             {/* ---- Restaurant Routes (role = "restaurant") ---- */}
             <Route

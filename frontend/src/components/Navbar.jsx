@@ -95,6 +95,17 @@ const Navbar = () => {
               </svg>
               <span>My Orders</span>
             </Link>
+            <Link
+              to="/about"
+              className={`nav-link-item ${location.pathname === "/about" ? "active" : ""}`}
+            >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>About</span>
+            </Link>
           </div>
 
           {/* Right Side: Cart + User Profile */}
@@ -216,6 +227,21 @@ const Navbar = () => {
                         </svg>
                       </div>
                       <span>My Cart {totalItems > 0 && `(${totalItems})`}</span>
+                    </Link>
+
+                    <Link
+                      to="/about"
+                      className="menu-option-item"
+                      onClick={() => setShowDropdown(false)}
+                    >
+                      <div className="option-icon-box">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <line x1="12" y1="16" x2="12" y2="12"></line>
+                          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                      </div>
+                      <span>About Zunoindia</span>
                     </Link>
                   </div>
 
